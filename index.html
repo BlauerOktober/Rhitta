@@ -17,6 +17,7 @@
     ================================================== -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/vendor.css">
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/2.3.0/css/dataTables.dataTables.css"> -->
 
     <!-- script
     ================================================== -->
@@ -91,7 +92,6 @@
                     A service to factor numbers, push math problems forwards, as well as check and calibrate <br> encryption lifespan estimates fast
                     </p>
                 </div>
-
             </div>
         </div>
 
@@ -184,18 +184,18 @@
                 <form>
                     <div>
                         <label for="sampleInput">Insert your string</label>
-                        <input class="h-full-width" type="email" placeholder="Your string" id="sampleInput">
+                        <input class="h-full-width" type="number" placeholder="Your string" id="sampleInput">
                     </div>
 
                     <div class="row">
                         <div class="column large-6 tab-12">
                             <label for="sampleInput">Bits</label>
-                            <input class="h-full-width" type="email" placeholder="Waiting until a string is inserted.." id="sampleInput">
+                            <input class="h-full-width" type="number" placeholder="Waiting until a string is inserted.." id="sampleInput">
                         </div>
     
                         <div class="column large-6 tab-12">
                             <label for="sampleInput">Digits</label>
-                            <input class="h-full-width" type="email" placeholder="Waiting until a string is inserted.." id="sampleInput">
+                            <input class="h-full-width" type="number" placeholder="Waiting until a string is inserted.." id="sampleInput">
                         </div>
                     </div>
 
@@ -234,7 +234,7 @@
 
                 <div class="table-responsive">
 
-                    <table>
+                    <table id="ifaas_jobs">
                             <thead>
                             <tr>
                                 <th>String</th>
@@ -374,9 +374,17 @@
 
     <!-- Java Script
     ================================================== -->
-    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- <script src="js/jquery-3.2.1.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/2.3.0/js/dataTables.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        $(document).ready( function () {
+            $('#ifaas_jobs').DataTable();
+        } );
+    </script>
 
 </body>
 
