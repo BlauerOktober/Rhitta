@@ -4993,11 +4993,8 @@ html.no-csstransitions .s-hero__content {
 }
 
 .modal-container {
-      background: var(--color-1);
-      padding: 20px;
+      background: var(--color-gray-19);
       margin: 20px;
       border-radius: 10px;
-      text-align: left;
       width: 50rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
