@@ -4998,3 +4998,12 @@ html.no-csstransitions .s-hero__content {
       border-radius: 10px;
       width: 50rem;
 }
+
+/* ------------------------------------------------------------------- 
+ * ## Input stroke
+ * ------------------------------------------------------------------- */
+.input-stroke {
+    background: transparent !important;
+    border: 0.2rem solid var(--color-btn-stroke) !important;
+}
+
