@@ -52,7 +52,7 @@
         <div class="modal-container">
             <div class="row">
                 <div class="column large-12">
-                    <h4>Privacy Policy and Terms of use</h4>
+                    <h4>Privacy Policy and Terms of Use</h4>
                     <p>Accept the <a href="https://blaueroktober.gitbook.io/rhitta-docs/privacy-policy">Privacy Policy</a> and <a href="https://blaueroktober.gitbook.io/rhitta-docs">Terms of Use</a> before you proceed.</p>
 
                     <label class="h-add-bottom">
@@ -97,7 +97,7 @@
             </nav> <!-- end s-header__nav-wrap -->
 
             <a href="xxxxxx" class="btn btn--primary btn--small">
-                Login in <i class="fas fa-sign-in-alt"></i>
+                Login <i class="fas fa-sign-in-alt"></i>
             </a>
 
         </div> <!-- end header-content -->
@@ -210,22 +210,39 @@
                 <p class="h1">IFaaS</p>
 
                 <form>
+
                     <div>
-                        <label for="sampleInput">Insert your string</label>
-                        <input class="h-full-width" type="number" placeholder="Your string" id="sampleInput">
+                        <label for="inputNumber">Insert your Number</label>
+                        <input class="h-full-width" type="number" placeholder="Your Number" id="inputNumber">
+                    </div>
+
+                    <div class="row">
+                        <div class="column large-6 tab-12">
+                            <label for="outputBits">Bits</label>
+                            <input class="h-full-width" type="number" placeholder="Waiting for the Number..." id="outputBits" disabled>
+                        </div>
+
+                        <div class="column large-6 tab-12">
+                            <label for="outputDigits">Digits</label>
+                            <input class="h-full-width" type="number" placeholder="Waiting for the Number..." id="outputDigits" disabled>
+                        </div>
+                    </div>
+                    <!-- <div>
+                        <label for="sampleInput">Insert your Number</label>
+                        <input class="h-full-width" type="number" placeholder="Your Number" id="sampleInput">
                     </div>
 
                     <div class="row">
                         <div class="column large-6 tab-12">
                             <label for="sampleInput">Bits</label>
-                            <input class="h-full-width" type="number" placeholder="Waiting until a string is inserted.." id="sampleInput">
+                            <input class="h-full-width" type="number" placeholder="Waiting for the Number..." id="sampleInput" disabled>
                         </div>
     
                         <div class="column large-6 tab-12">
                             <label for="sampleInput">Digits</label>
-                            <input class="h-full-width" type="number" placeholder="Waiting until a string is inserted.." id="sampleInput">
+                            <input class="h-full-width" type="number" placeholder="Waiting for the Number..." id="sampleInput" disabled>
                         </div>
-                    </div>
+                    </div> -->
 
                     <label class="h-add-bottom">
                         <input type="checkbox">
@@ -406,6 +423,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdn.datatables.net/2.3.0/js/dataTables.js"></script>
     <script src="js/plugins.js"></script>
+    <script src="js/calc_num.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/main.js"></script>
 
