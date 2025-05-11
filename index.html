@@ -92,6 +92,8 @@
                     <li><a class="smoothscroll" href="#home" title="Intro">Home</a></li>
                     <li><a class="smoothscroll" href="#about" title="About">About</a></li>
                     <li><a class="smoothscroll" href="#application" title="Services">Application</a></li>
+                    <li><a class="smoothscroll" href="#jobs" title="Services">Jobs</a></li>
+                    <li><a class="smoothscroll" href="#statistics" title="Services">Statistics</a></li>
                     <li><a class="smoothscroll" href="#contact" title="Works">Contact</a></li>
                 </ul>
             </nav> <!-- end s-header__nav-wrap -->
@@ -219,35 +221,22 @@
                     <div class="row">
                         <div class="column large-6 tab-12">
                             <label for="outputBits">Bits</label>
-                            <input class="h-full-width" type="number" placeholder="Waiting for the Number..." id="outputBits" disabled>
+                            <input class="input-stroke h-full-width" type="number" placeholder="Waiting for the Number..." id="outputBits" disabled>
                         </div>
 
                         <div class="column large-6 tab-12">
                             <label for="outputDigits">Digits</label>
-                            <input class="h-full-width" type="number" placeholder="Waiting for the Number..." id="outputDigits" disabled>
+                            <input class="input-stroke h-full-width" type="number" placeholder="Waiting for the Number..." id="outputDigits" disabled>
                         </div>
                     </div>
-                    <!-- <div>
-                        <label for="sampleInput">Insert your Number</label>
-                        <input class="h-full-width" type="number" placeholder="Your Number" id="sampleInput">
+
+                    <div>
+                        <label for="inputMail">Your E-Mail</label>
+                        <input class="h-full-width" type="email" placeholder="your@mailbox.com" id="inputMail">
                     </div>
 
-                    <div class="row">
-                        <div class="column large-6 tab-12">
-                            <label for="sampleInput">Bits</label>
-                            <input class="h-full-width" type="number" placeholder="Waiting for the Number..." id="sampleInput" disabled>
-                        </div>
-    
-                        <div class="column large-6 tab-12">
-                            <label for="sampleInput">Digits</label>
-                            <input class="h-full-width" type="number" placeholder="Waiting for the Number..." id="sampleInput" disabled>
-                        </div>
-                    </div> -->
+                    <p><small>Once your Job is contested, you will be notifyed via E-Mail.</small></p>
 
-                    <label class="h-add-bottom">
-                        <input type="checkbox">
-                        <span class="label-text">Notify me when done</span>
-                    </label>
                 </form>
 
                 <div class="row">
@@ -267,9 +256,9 @@
 
     </section> <!-- end s-application -->
 
-    <!-- statistic
+    <!-- jobs
     ================================================== -->
-    <section id="contact" class="s-services">
+    <section id="jobs" class="s-services">
 
         <div class="row">
             <div class="column large-12">
@@ -282,10 +271,11 @@
                     <table id="ifaas_jobs">
                             <thead>
                             <tr>
-                                <th>String</th>
+                                <th>Number</th>
                                 <th>Bits</th>
                                 <th>Digits</th>
                                 <th>Bounty</th>
+                                <th>Start</th>
                                 <th>Status</th>
                             </tr>
                             </thead>
@@ -294,14 +284,16 @@
                                 <td>3453459808923485098092348598390485934859354980923</td>
                                 <td>240</td>
                                 <td>50</td>
-                                <td>15 $FACT</td>
+                                <td>35 $USD</td>
+                                <td>5/1/2025 00:15:00 UTC </td>
                                 <td>Contested</td>
                             </tr>
                             <tr>
                                 <td>453860983409580820435914858209</td>
                                 <td>186</td>
                                 <td>32</td>
-                                <td>9 $FACT</td>
+                                <td>14 $USD</td>
+                                <td>5/1/2025 00:15:00 UTC</td>
                                 <td>Awaiting</td>
                             </tr>
                             </tbody>
@@ -309,6 +301,12 @@
                 </div>
             </div>
         </div>
+
+    </section> <!-- end s-jobs -->
+
+    <!-- statistics
+    ================================================== -->
+    <section id="statistics" class="s-services">
 
         <div class="row">
             <div class="column large-12">
@@ -341,7 +339,7 @@
 
                 <form>
                     <div>
-                        <label for="sampleInput">Your email</label>
+                        <label for="sampleInput">Your E-Mail</label>
                         <input class="h-full-width" type="email" placeholder="your@mailbox.com" id="sampleInput">
                     </div>
                     <div>
