@@ -119,7 +119,7 @@
                 <h1>IFaaS</h1>
                 <div class="s-hero__content-about">
                     <p>
-                    A service to factor numbers, push math problems forwards, as well as check and calibrate <br> encryption lifespan estimates fast
+                    A service that factors numbers, analyzes RSA keys for vulnerabilities, and calibrates encryption lifespan estimates using real-world adversaries.
                     </p>
                 </div>
             </div>
@@ -147,34 +147,25 @@
                 <p class="h1">About</p>
 
                 <p class="lead">
-                    IFaaS stands for “Integer Factorization as a Service,” which is, 
-                    essentially, a platform to offload factorization of numbers and 
-                    their associated work (setup, electricity, hardware, etc.) from 
-                    researchers, via providing financial incentive.                     <br><br>
+                    IFaaS (Integer Factorization as a Service) is a platform designed 
+                    to offload the computational and operational burden of number 
+                    factorization. It handles the associated tasks—such as software 
+                    setup, parameter tuning, electricity usage, hardware provisioning, 
+                    and cooling—by offering financial incentives to those who perform 
+                    the work, enabling researchers to outsource factorization efficiently.                    <br><br>
                     
-                    The financial incentive is necessary, as most people nowadays 
-                    don’t have a surplus of money, nor most other resources; hence, 
-                    they cannot afford to run such computations, and use a bunch of 
-                    electricity, without getting more than enough made to cover 
-                    their explicit and implicit costs, even if they are enthusiastic 
-                    about such efforts.                                                 <br><br>
-                    
-                    Providing financial incentive would also attract more interest 
-                    towards this field, and in turn, spur development of a more 
-                    efficient package for integer factorization as a whole, as well 
-                    as making software improvements, in order to utilize features 
-                    baked into the hardware being paid for.                             <br><br>
-                    
-                    Such an idea was written of in the 2015 paper 
+                    The concept was originally proposed in the 2015 paper 
                     <a href="https://eprint.iacr.org/2015/1000">Factoring as a 
-                    Service</a>, with an RSA-512 being demonstrated to cost 75 USD 
-                    at the time. We think it can be done for much cheaper, at 20 USD.
+                    Service</a>, which reported a successful RSA-512 factorization
+                     at a cost of approximately $75. Our implementation demonstrates 
+                     a more cost-efficient approach, achieving the factorization for 
+                     $25 under similar computational constraints. 
                 </p>
             </div>
 
         </div> <!-- end row -->
 
-        <div class="row block-large-1-2 block-tab-full s-about__process item-list">
+<!--         <div class="row block-large-1-2 block-tab-full s-about__process item-list">
             <div class="column item item-process" data-aos="fade-up">
                 <h3 class="item-title">Commit Number</h3>
                 <p class="lead">
@@ -210,9 +201,58 @@
                 community or the designated verifier.
                 </p>
             </div>
-        </div>
+        </div> -->
 
     </section> <!-- end s-about -->
+
+
+    <!-- instructions
+    ================================================== -->
+    <section id="about" class="s-about">
+
+        <div class="row">
+
+            <div class="column large-12 intro">
+
+                <p class="h1">Instructions</p>
+
+                <div class="row block-large-1-2 block-tab-full s-about__process item-list">
+                    <div class="column item item-process">
+                        <h3 class="item-title">Place Bounty</h3>
+                        <p class="lead">
+                        We post a bounty on your behalf for the target number within 
+                        our internal platform. This bounty accounts for expected 
+                        computational costs, labor, and operational overhead. Higher 
+                        bounties incentivize solvers to compete, accelerating the 
+                        factorization process through market-driven efficiency.
+                        </p>
+                    </div>
+                    <div class="column item item-process">
+                        <h3 class="item-title">Announce Factorization</h3>
+                        <p class="lead">
+                        Once your number has been factored, the solver submits 
+                        a cryptographically secure proof-of-knowledge that 
+                        emonstrates possession of the factors without revealing 
+                        them. A monitoring window of approximately 24–48 hours 
+                        follows the initial submission, during which additional 
+                        claims can be made and validated.
+                        </p>
+                    </div>
+                    <div class="column item item-process">
+                        <h3 class="item-title">Claim Solution</h3>
+                        <p class="lead">
+                        The solver formally claims the bounty upon successful 
+                        factorization. Once verified, the solver is compensated, 
+                        and the discovered factorization is securely delivered 
+                        to the user via email.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- end row -->
+
+    </section> <!-- end s-instructions -->
 
     <!-- application
     ================================================== -->
@@ -227,7 +267,7 @@
 
                     <div>
                         <label for="inputNumber">Insert your Number</label>
-                        <input class="h-full-width" type="number" placeholder="Your Number" id="inputNumber">
+                        <input class="h-full-width" type="number" placeholder="Your Number" id="inputNumber" oninput="this.value = this.valueAsNumber">
                     </div>
 
                     <div class="row">
