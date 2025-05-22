@@ -5000,10 +5000,13 @@ html.no-csstransitions .s-hero__content {
 }
 
 /* ------------------------------------------------------------------- 
- * ## Input stroke
+ * ## Input stroke | error
  * ------------------------------------------------------------------- */
 .input-stroke {
     background: transparent !important;
     border: 0.2rem solid var(--color-btn-stroke) !important;
 }
 
+.input-error{
+  outline: 1px solid red;
+}
