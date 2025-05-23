@@ -29,7 +29,7 @@ async function fetchFactPrice() {
       entry.length,
       (entry.bounty * priceUSD).toFixed(2),
       formatDateTime(entry.millisSinceEpoch),
-      entry.solution ? "Solved" : "Unsolved",
+      entry.solution ? "Contested" : "Awaiting",
     ]);
 
     $("#ifaas_jobs").DataTable({
