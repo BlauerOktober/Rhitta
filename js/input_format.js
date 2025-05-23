@@ -28,9 +28,9 @@ function setInputFilter(textbox, inputFilter, errMsg) {
 
 
 // Install input filters.
-setInputFilter(document.getElementById("inputNumber"), function(value) {
+setInputFilter(document.getElementById("intTextBox"), function(value) {
   return /^-?\d*$/.test(value); }, "Must be an integer");
-setInputFilter(document.getElementById("uintTextBox"), function(value) {
+setInputFilter(document.getElementById("inputNumber"), function(value) {
   return /^\d*$/.test(value); }, "Must be an unsigned integer");
 setInputFilter(document.getElementById("intLimitTextBox"), function(value) {
   return /^\d*$/.test(value) && (value === "" || parseInt(value) <= 500); }, "Must be between 0 and 500");
