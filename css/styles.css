@@ -5012,10 +5012,6 @@ body.modal-open {
     border: 0.2rem solid var(--color-btn-stroke) !important;
 }
 
-.input-error{
-  outline: 1px solid red;
-}
-
 /* ------------------------------------------------------------------- 
  * ## td.truncate
  * ------------------------------------------------------------------- */
