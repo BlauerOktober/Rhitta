@@ -5010,3 +5010,15 @@ html.no-csstransitions .s-hero__content {
 .input-error{
   outline: 1px solid red;
 }
+
+/* ------------------------------------------------------------------- 
+ * ## td.truncate
+ * ------------------------------------------------------------------- */
+td.truncate {
+    max-width: 150px; /* adjust width as needed */
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+  }
