@@ -3,7 +3,7 @@
   "start_url": "/",
   "name": "Rhitta",
   "short_name": "Rhitta",
-  "description": "Inter Factorization as a Service",
+  "description": "Integer Factorization as a Service",
   "theme_color": "#0b0b0c",
   "background_color": "#000000",
   "display": "standalone",
