@@ -395,7 +395,10 @@
                     </label>
 
                     <!-- Honeypot anti-spam field -->
-                    <input type="text" name="website" style="display:none">
+                    <div style="display: none;">
+                        <label for="website"></label>
+                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                    </div>
 
                     <input class="btn--primary h-full-width" type="submit" value="Submit">
                 </form>
