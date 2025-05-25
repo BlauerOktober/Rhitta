@@ -1,9 +1,9 @@
 async function fetchFactPrice() {
     const response = await fetch(
-      "https://explorer.fact0rn.io/ext/getcurrentprice"
+      "https://api.xeggex.com/api/v2/asset/getbyticker/fact"
     );
     const data = await response.json();
-    return data.last_price_usd;
+    return data.usdValue;
   }
 
   async function fetchDeadpoolEntries() {
