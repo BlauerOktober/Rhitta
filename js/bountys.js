@@ -1,9 +1,9 @@
 async function fetchFactPrice() {
     const response = await fetch(
-      "https://api.xeggex.com/api/v2/asset/getbyticker/fact"
+      "https://sismargaret.fact0rn.io/api/public/deadpool/stats"
     );
     const data = await response.json();
-    return data.usdValue;
+    return data.price;
   }
 
   async function fetchDeadpoolEntries() {
