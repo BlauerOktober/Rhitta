@@ -368,30 +368,35 @@
 
                 <p class="h1">Contact</p>
 
-                <form>
+                <form method="POST" action="/api/contact">
                     <div>
-                        <label for="sampleInput">Your E-Mail</label>
-                        <input class="h-full-width" type="email" placeholder="your@mailbox.com" id="sampleInput">
+                        <label for="contactEmail">Your E-Mail</label>
+                        <input class="h-full-width" type="email" name="email" id="contactEmail" placeholder="your@mailbox.com" required>
                     </div>
+
                     <div>
-                        <label for="sampleRecipientInput">Reason for contacting</label>
+                        <label for="contactReason">Reason for contacting</label>
                         <div class="ss-custom-select">
-                            <select class="h-full-width" id="sampleRecipientInput">
-                                <option value="Option 1">Questions</option>
-                                <option value="Option 2">Report</option>
-                                <option value="Option 3">Others</option>
+                            <select class="h-full-width" name="reason" id="contactReason" required>
+                                <option value="">-- Please select --</option>
+                                <option value="questions">Questions</option>
+                                <option value="report">Report</option>
+                                <option value="others">Others</option>
                             </select>
                         </div>
                     </div>
                     
-                    <label for="exampleMessage">Message</label>
-                    <textarea class="h-full-width" placeholder="Your message" id="exampleMessage"></textarea>
+                    <label for="contactMessage">Message</label>
+                    <textarea class="h-full-width" name="message" id="contactMessage" placeholder="Your message" required></textarea>
 
                     <label class="h-add-bottom">
-                        <input type="checkbox">
+                        <input type="checkbox" name="copyToSelf">
                         <span class="label-text">Send a copy to yourself</span>
                     </label>
-                
+
+                    <!-- Honeypot anti-spam field -->
+                    <input type="text" name="website" style="display:none">
+
                     <input class="btn--primary h-full-width" type="submit" value="Submit">
                 </form>
             </div>
@@ -449,7 +454,7 @@
     <!-- Java Script - Small to Big Payload
     ================================================== -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    
+
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script src="js/calc_num.js"></script>
