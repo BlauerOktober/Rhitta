@@ -259,46 +259,47 @@
 
                 <p class="h1">IFaaS</p>
 
-                <form>
+                <form method="POST" action="/api/jobs">
 
                     <div>
                         <label for="inputNumber">Insert your Number</label>
-                        <input class="h-full-width" inputmode="numeric" lang="en" style="ime-mode:disabled;" type="text" placeholder="Your Number" id="inputNumber" autocomplete="off" spellcheck="false">
+                        <input class="h-full-width" inputmode="numeric" lang="en" style="ime-mode:disabled;" type="text" placeholder="Your Number" name="inputNumber" id="inputNumber" autocomplete="off" spellcheck="false" required>
+                        <div id="inputNumberAlert" style="color: red; font-size: 0.9em; margin-top: 4px;"></div>
                     </div>
 
                     <div class="row">
                         <div class="column large-6 tab-12">
                             <label for="outputBits">Bits</label>
-                            <input class="input-stroke h-full-width" type="number" placeholder="Waiting for the Number..." id="outputBits" disabled>
+                            <input class="input-stroke h-full-width" type="number" placeholder="Waiting for the Number..." name="outputBits" id="outputBits" readonly>
                         </div>
 
                         <div class="column large-6 tab-12">
                             <label for="outputDigits">Digits</label>
-                            <input class="input-stroke h-full-width" type="number" placeholder="Waiting for the Number..." id="outputDigits" disabled>
+                            <input class="input-stroke h-full-width" type="number" placeholder="Waiting for the Number..." name="outputDigits" id="outputDigits" readonly>
                         </div>
                     </div>
 
                     <div>
-                        <label for="inputMail">Your E-Mail</label>
-                        <input class="h-full-width" type="email" placeholder="your@mailbox.com" id="inputMail">
+                        <label for="inputMail_Job">Your E-Mail</label>
+                        <input class="h-full-width" type="email" placeholder="your@mailbox.com" name="inputMail_Job" id="inputMail_Job" required>
                     </div>
 
-                    <p>(Once your Job is contested, you will be notifyed via E-Mail)</p>
+                    <p><small>Once your job is processed, you will be notified via email.</small></p>
+
+                    <div class="row">
+                        <div class="column large-6 tab-12">
+                            <button class="btn--primary h-full-width" type="submit" name="paymentMethod" value="paypal">Submit via PayPal</button>
+                            <button class="btn--primary h-full-width" type="submit" name="paymentMethod" value="venmo">Submit via Venmo</button>
+                        </div>
+
+                        <div class="column large-6 tab-12">
+                            <button class="btn--primary h-full-width" type="submit" name="paymentMethod" value="bank_transfer">Submit via Bank Transfer</button>
+                            <button class="btn--primary h-full-width" type="submit" name="paymentMethod" value="card">Submit via Card</button>
+                        </div>
+                    </div>
 
                 </form>
-
-                <div class="row">
-                    <div class="column large-6 tab-12">
-                        <input class="btn--primary h-full-width" type="submit" value="Submit via paypal">
-                        <input class="btn--primary h-full-width" type="submit" value="Submit via Venmo">
-                    </div>
-
-                    <div class="column large-6 tab-12">
-                        <input class="btn--primary h-full-width" type="submit" value="Submit vis Bank Transfer">
-                        <input class="btn--primary h-full-width" type="submit" value="Submit via Card">
-                    </div>
-                </div>
-
+                
             </div>
         </div>
 
@@ -371,13 +372,13 @@
                 <form method="POST" action="/api/contact">
                     <div>
                         <label for="contactEmail">Your E-Mail</label>
-                        <input class="h-full-width" type="email" name="email" id="contactEmail" placeholder="your@mailbox.com" required>
+                        <input class="h-full-width" type="email" name="email" name="contactEmail" id="contactEmail" placeholder="your@mailbox.com" required>
                     </div>
 
                     <div>
                         <label for="contactReason">Reason for contacting</label>
                         <div class="ss-custom-select">
-                            <select class="h-full-width" name="reason" id="contactReason" required>
+                            <select class="h-full-width" name="contactReason" id="contactReason" required>
                                 <option value="">-- Please select --</option>
                                 <option value="questions">Questions</option>
                                 <option value="report">Report</option>
@@ -387,7 +388,7 @@
                     </div>
                     
                     <label for="contactMessage">Message</label>
-                    <textarea class="h-full-width" name="message" id="contactMessage" placeholder="Your message" required></textarea>
+                    <textarea class="h-full-width" name="contactMessage" id="contactMessage" placeholder="Your message" required></textarea>
 
                     <label class="h-add-bottom">
                         <input type="checkbox" name="copyToSelf">
@@ -399,7 +400,7 @@
                         <label for="website"></label>
                         <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
                     </div>
-
+                    
                     <input class="btn--primary h-full-width" type="submit" value="Submit">
                 </form>
             </div>
