@@ -1,18 +1,18 @@
 const CACHE_NAME = 'rhitta-v2';
 const PRECACHE_URLS = [
   '/',
-  '/index.html',
-  '/manifest.json',
-  '/css/styles.css',
-  '/css/vendor.css',
-  '/js/main.js',
-  '/js/modal.js',
-  '/js/modernizr.js',
-  '/js/bountys.js',
-  '/js/plugins.js',
-  '/js/calc_num.js',
-  '/icon512_rounded.png',
-  '/icon512_maskable.png'
+  './index.html',
+  './manifest.json',
+  './css/styles.css',
+  './css/vendor.css',
+  './js/main.js',
+  './js/modal.js',
+  './js/modernizr.js',
+  './js/bountys.js',
+  './js/plugins.js',
+  './js/calc_num.js',
+  './icon512_rounded.png',
+  './icon512_maskable.png'
 ];
 
 const RUNTIME_CDN_HOSTS = [
