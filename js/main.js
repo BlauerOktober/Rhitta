@@ -332,28 +332,23 @@
 
 })(jQuery);
 
-   /* service-worker.js
+    /* service-worker.js
     * ------------------------------------------------------ */
-/*    if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js')
-        .then(registration => console.log('Service Worker registered with scope:', registration.scope))
-        .catch(error => console.error('Service Worker registration failed:', error));
-    }
- */
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js')
+    .then(reg => {
+      console.log('SW registered:', reg.scope);
 
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/service-worker.js')
-            .then(reg => {
-            console.log('SW registered:', reg.scope);
+      navigator.serviceWorker.ready.then(() => {
+        navigator.serviceWorker.addEventListener('message', event => {
+          if (event.data?.type === 'NEW_VERSION_AVAILABLE') {
+            if (confirm("New version available. Reload to update?")) {
+              window.location.reload();
+            }
+          }
+        });
+      });
+    })
+    .catch(err => console.error('SW registration failed:', err));
+}
 
-            navigator.serviceWorker.addEventListener('message', event => {
-                if (event.data && event.data.type === 'NEW_VERSION_AVAILABLE') {
-                // Show user a prompt to refresh
-                if (confirm("New version available. Reload to update?")) {
-                    window.location.reload();
-                }
-                }
-            });
-            })
-            .catch(err => console.error('SW registration failed:', err));
-    }
