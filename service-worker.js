@@ -1,6 +1,6 @@
 const CACHE_NAME = 'rhitta-v2';
 const PRECACHE_URLS = [
-  '/',
+  './',
   './index.html',
   './manifest.json',
   './css/styles.css',
@@ -21,7 +21,7 @@ const RUNTIME_CDN_HOSTS = [
   'js/fontawesome'
 ];
 
-// Install event - precache
+// Install event - precache files
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => cache.addAll(PRECACHE_URLS))
@@ -39,7 +39,6 @@ self.addEventListener('activate', event => {
     ).then(() => self.clients.claim())
   );
 
-  // Notify clients about the new service worker activation
   event.waitUntil(
     self.clients.matchAll().then(clients => {
       clients.forEach(client => {
@@ -49,7 +48,7 @@ self.addEventListener('activate', event => {
   );
 });
 
-// Fetch event - handle runtime caching & fallback
+// Fetch event - runtime caching and fallback
 self.addEventListener('fetch', event => {
   const request = event.request;
   const url = new URL(request.url);
@@ -75,7 +74,7 @@ self.addEventListener('fetch', event => {
   // App shell fallback for navigation (SPA)
   if (request.mode === 'navigate') {
     event.respondWith(
-      caches.match('/index.html').then(response => response || fetch(request))
+      caches.match('./index.html').then(response => response || fetch(request))
     );
     return;
   }
