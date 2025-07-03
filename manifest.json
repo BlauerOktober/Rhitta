@@ -1,6 +1,6 @@
 {
-  "id": "https://blaueroktober.github.io/Rhitta/",
-  "start_url": "/",
+  "id": "./",
+  "start_url": "./",
   "name": "Rhitta",
   "short_name": "Rhitta",
   "description": "Integer Factorization as a Service",
@@ -11,13 +11,13 @@
   "lang": "en-US",
   "icons": [
     {
-      "src": "icon512_maskable.png",
+      "src": "./icon512_maskable.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "icon512_rounded.png",
+      "src": "./icon512_rounded.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
